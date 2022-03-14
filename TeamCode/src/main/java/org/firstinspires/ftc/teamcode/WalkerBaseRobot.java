@@ -26,10 +26,7 @@ public class WalkerBaseRobot {
     /* Public Motors and Servos */
     public DcMotor  leftMotor   = null;
     public DcMotor  rightMotor  = null;
-    public DcMotor  armMotor    = null;
-    public Servo    leftClaw    = null;
-    public Servo    rightClaw   = null;
-// hello world?sdgvaldsjghasdfihoseudf
+    
     
     //Constants for Arm and Servo Operation
     public static final double MID_SERVO        =  0.5;
