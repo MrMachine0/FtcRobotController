@@ -26,12 +26,8 @@ public class WalkerBaseRobot {
     /* Public Motors and Servos */
     public DcMotor  leftMotor   = null;
     public DcMotor  rightMotor  = null;
-    
-    
+
     //Constants for Arm and Servo Operation
-    public static final double MID_SERVO        =  0.5;
-    public static final double ARM_UP_POWER     =  0.45;
-    public static final double ARM_DOWN_POWER   = -0.45;
 
     // Local OpMode members
     HardwareMap hwMap = null;
@@ -50,26 +46,23 @@ public class WalkerBaseRobot {
         // Define and Initialize Motors.  Assign Names that match the setup on the RC Phone
         leftMotor   = hwMap.dcMotor.get("left_drive");
         rightMotor  = hwMap.dcMotor.get("right_drive");
-        armMotor    = hwMap.dcMotor.get("left_arm");
+
         leftMotor.setDirection(DcMotor.Direction.REVERSE); // Set to REVERSE if using AndyMark motors
         rightMotor.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
 
         // Set all motors to zero power
         leftMotor.setPower(0);
         rightMotor.setPower(0);
-        armMotor.setPower(0);
+
 
         // Set all motors to run without encoders.
         // May want to use RUN_USING_ENCODERS if encoders are installed.
         leftMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        armMotor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
 
         // Define and initialize ALL installed servos.
-        leftClaw = hwMap.servo.get("left_hand");
-        rightClaw = hwMap.servo.get("right_hand");
-        leftClaw.setPosition(MID_SERVO);
-        rightClaw.setPosition(MID_SERVO);
+
     }
 
     /***
