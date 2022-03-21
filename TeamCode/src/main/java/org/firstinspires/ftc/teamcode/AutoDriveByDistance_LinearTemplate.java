@@ -39,9 +39,9 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
 
     /* Declare OpMode members. */
     WalkerBaseRobot         robot   = new WalkerBaseRobot();   // Use a Pushbot's hardware
-    private double          COUNTS_PER_MOTOR_REV = 1440;
+    private double          COUNTS_PER_MOTOR_REV = 2150.8;
     private final double    DRIVE_GEAR_REDUCTION = 1.0;
-    private double          WHEEL_DIAMETER_INCHES = 4.0;
+    private double          WHEEL_DIAMETER_INCHES = 3.75;
     private double          COUNTS_PER_INCH = (COUNTS_PER_MOTOR_REV * DRIVE_GEAR_REDUCTION) / (WHEEL_DIAMETER_INCHES * 3.1415);
     private double          COUNTS_PER_DEGREE = COUNTS_PER_MOTOR_REV / 360;
     private double          DRIVE_SPEED = 0.6;
