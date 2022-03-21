@@ -66,7 +66,7 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
 
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
-
+        correctedDrive(10);
         // Step through each leg of the path, ensuring that the Auto mode has not been stopped along the way
         
         // Step 1:  Drive forward for 3 seconds
