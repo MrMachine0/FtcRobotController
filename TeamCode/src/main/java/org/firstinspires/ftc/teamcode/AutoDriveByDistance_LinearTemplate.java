@@ -32,12 +32,12 @@ import com.qualcomm.robotcore.util.ElapsedTime;
  *  However, there are several ways that this type of sequence could be streamlined,
  *
  */
-
+/*
 @Autonomous(name="WalkerBot: Auto Drive By Distance", group="WalkerBot")
 //@Disabled
 public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
 
-    /* Declare OpMode members. */
+    // Declare OpMode members.
     WalkerBaseRobot         robot   = new WalkerBaseRobot();   // Use a Pushbot's hardware
     private double          COUNTS_PER_MOTOR_REV = 2150.8;
     private final double    DRIVE_GEAR_REDUCTION = 1.0;
@@ -57,7 +57,7 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
         /*
          * Initialize the drive system variables.
          * The init() method of the hardware class does all the work here
-         */
+
         robot.init(hardwareMap);
 
         // Send telemetry message to signify robot waiting;
@@ -66,7 +66,9 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
 
         // Wait for the game to start (driver presses PLAY)
         waitForStart();
-        correctedDrive(10);
+        telemetry.addData("Test:", "123");
+        telemetry.update();
+        sleep(1000);
         // Step through each leg of the path, ensuring that the Auto mode has not been stopped along the way
         
         // Step 1:  Drive forward for 3 seconds
@@ -119,7 +121,7 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
 
     public void closeHands() { // You will need to modify this
         robot.claw.setPosition(0.0);
-    }*/
+    }
 
     public void delay(double t) { // Imitates the Arduino delay function
         runtime.reset();
@@ -133,7 +135,7 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
         robot.armMotor.setPower(p);
         delay(t);
         robot.armMotor.setPower(0);
-    }*/
+    }
 
     // Add more functions here if needed
     public void driveStraightInches(double speed,
@@ -265,3 +267,4 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
         }
     }
 }
+*/
