@@ -72,7 +72,7 @@ public class AutoDriveByDistance_LinearTemplate extends LinearOpMode {
         // Step through each leg of the path, ensuring that the Auto mode has not been stopped along the way
         
         // Step 1:  Drive forward for 3 seconds
-        
+        correctedDrive(10);
 
         // Step 2:  Spin right for 1.3 seconds
 
